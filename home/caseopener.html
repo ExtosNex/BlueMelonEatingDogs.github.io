@@ -1,121 +1,35 @@
 <!DOCTYPE html>
-<title>CASE OPENER</title>
 <html>
-	<body bgcolor = '#101010'>
+  <link rel="stylesheet" href="main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+ </script>
+<script src="main.js"></script>
+		<title>CASE OPENER</title>
+	<body>
 		<style>
-			h1{
-				color: gold;
-				font-size: 200%;
-			}
-			h2{
-				color: gold;
-			}
-			.button{
-				color: gold;
-				background-color: #101010;
-				border-color: gold;
-			}
-			p{
-				color: gold;
-			}
-			marquee{
-				color: gold;
-				font-size: 120%;
-			}
-		</style>
-		<h1>CASE OPENER</h1>
+		  </style>
+		<div class="topnav">
+		    <h1 class="shimmer">CASE OPENER</h1>
+		</div>
+		
 		<h2>BALANCE</h2>
-		<p id = money></p>
-		<button class = button id = btn1 onclick = buycase()>BUY MONEY CASE ($6)</button>
-		<p id = camount></p>
-		<button class = button id = btn4 onclick = opencase()>OPEN CASE</button><br>
-		<button class = button id = btn5 onclick = unlock()>UNLOCK UPGRADES ($20)</button>
-		<hr color = orange>
-		<marquee>Interest rate is: <strong id = interest></strong>... Interest recieved avery 2 minutes.</marquee>
+		<p id = "money"></p>
+		<button class = "button" id = "btn1" onclick = "buycase()">BUY MONEY CASE ($6)</button>
+		<p id = "camount"></p>
+		<button class = "button" id = "btn4" onclick = "opencase()">OPEN CASE</button><br>
+		<button class = "button" id = "btn5" onclick = "unlock()">UNLOCK UPGRADES ($20)</button>
+		<hr color = "orange">
+		<marquee>Interest rate is: <strong id = "interest"></strong>... Interest recieved avery 2 minutes.</marquee>
 		<h2>BANK</h2>
-		<p id = bank></p>
-		<button class = button id = btn2 onclick = transfer()>TRANSFER ALL MONEY</button>
-		<button class = button id = btn3 onclick = transferprompt()>TRANSFER MONEY</button>
-		<div id = upgrades>
-			<hr color = orange>
+		<p id = "bank"></p>
+		<button class = "button" id = "btn2" onclick = "transfer()">TRANSFER ALL MONEY</button>
+		<button class = "button" id = "btn3" onclick = "transferprompt()">TRANSFER MONEY</button>
+		<div style="display: none;" id="upgrades">
+			<hr color = "orange">
 			<h1>hi</h1>
 		</div>
-		<center>
-			<p>Version: 0.1 Open Beta</p>
-		</center>
-		<script>
-			//STOP LOOKING AT THE SOURCE CODE
-			var money = 6;
-			var bank = 0;
-			var moneycase = 0;
-			var interest = 2;
-			var timer = setInterval(onesec, 100);
-			var interest = setInterval(interesttimer, 120000);
-			document.getElementById("upgrades").style.display = "none";
-			
-			function onesec(){
-				document.getElementById("money").innerHTML = "$" + money + "";
-				document.getElementById("bank").innerHTML = "$" + bank + "";
-				document.getElementById("interest").innerHTML = "" + interest + "00%";
-				document.getElementById("camount").innerHTML = "" + moneycase + " CASE(S)";
-			}
-			
-			function interesttimer(){
-				bank *= interest
-			}
-			
-			function buycase(){
-				if(money < 6){
-					alert("NO MONEY");
-				}
-				if(money >= 6){
-					money -= 6;
-					moneycase += 1;
-				}
-			}
-			
-			function opencase(){
-				if(moneycase < 1){
-					alert("NO CASES");
-				}
-				
-				if(moneycase >= 1){
-					var recieved = Math.floor((Math.random() * 10) + 1);
-					alert("Recieved $" + recieved + "");
-					moneycase -= 1;
-					bank += recieved;
-				}
-			}
-			
-			function transfer(){
-				money += bank;
-				bank -= bank;
-			}
-			
-			function transferprompt(){
-				var mount = prompt("AMOUNT:");
-				var amount = parseInt(mount, 10);
-				if(amount >= bank){
-					money += bank;
-					bank -= bank;
-				}
-				
-				if(amount <= bank){
-					money += amount;
-					bank -= amount;
-				}
-			}
-			
-			function unlock(){
-				if(money < 20){
-					alert("NOT ENOUGH MONEY");
-				}
-				if(money >= 20){
-					document.getElementById("upgrades").style.display = "initial";
-					document.getElementById("btn5").style.display = "none";
-					money -= 20;
-				}
-			}
-		</script>
+		<footer>
+		  <p>Version: 0.1 Open Beta</p>
+		</footer>
 	</body>
 </html>
