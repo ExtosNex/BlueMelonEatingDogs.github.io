@@ -1,0 +1,52 @@
+body{
+		  background-color: #101010;
+		  margin: 10;
+		  font-family: Arial, Helvetica, sans-serif;
+		  }
+			h1 {
+      text-align: center;
+      color: #ffffff;
+			}
+			h2{
+				color: gold;
+			}
+			.button{
+				color: gold;
+				background-color: #101010;
+				border-color: gold;
+			}
+			p{
+				color: gold;
+			}
+			marquee{
+				color: gold;
+				font-size: 120%;
+			}
+			
+			footer{
+			  text-align: center;
+			}
+			
+			.topnav {
+    overflow: hidden;
+    background-color: #000000;
+    position: relative;
+    border: 2px solid gold;
+			}
+
+/*Shimmer Text CSS*/
+ .shimmer {
+  /* Standar Syntax */
+  animation: shimmer 1s infinite;
+}
+
+/* Standar Syntax */
+@keyframes shimmer{
+  10%{color: #ffffcc;}
+  40%{color: #ffff99;}
+	20%{color: #ffff66;}
+	40%{color: #ffff00;}
+	60%{color: #e6e600;}
+	70%{color: #ffcc00;}
+	30%{color: #ffe700;}
+}
