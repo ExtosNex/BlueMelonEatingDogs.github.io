@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<body bgcolor="#FFA500">
+
+<h1 style="color:red">The Useful Website</h1>
+
+<h2>Useful links:</h2>
+
+<a href="https://www.google.com.au/" target="_blank">Google</a>
+<a href="https://www.youtube.com/" target="_blank">YouTube</a>
+<a href="https://intranet.bmg.vic.edu.au/moodle/login/index.php" target="_blank">Moodle</a>
+<a href="" target="_blank"></a>
+<a href="" target="_blank"></a>
+<a href="" target="_blank"></a>
+<a href="" target="_blank"></a>
+
+<h2>The current time in Cencibles is:</h2>
+
+<p id = "p1"></p>
+
+<script>
+var myVar = setInterval(function(){ myTimer() }, 1157.40740741);
+function myTimer() {
+  var nc = new Date();
+  var hc = nc.getHours();
+  var mc = nc.getMinutes();
+  var sc = nc.getSeconds();
+  var hs = hc * 3600;
+  var ms = mc * 60;
+  var ts = hs + ms + sc;
+  var ct = ts * 1000 / 86400;
+  var ctr = ct.toFixed(2);
+  document.getElementById("p1").innerHTML = ""+ ctr +"";
+}
+</script>
+
+<h2>The current local time and date is:</h2>
+
+<p id = "p2"></p>
+
+<script>
+var myVar2 = setInterval(function(){myTimer2() }, 1000);
+function myTimer2(){
+ document.getElementById("p2").innerHTML = new Date();
+}
+</script>
+
+<button type="button" onclick = "myFunction()">Change colour to purple</button>
+
+<script>
+function myFunction(){
+  document.body.style.backgroundColor ='#BA55D3';
+}
+</script>
+
+<button type="button" onclick="myFunction2()">Change colour to green</button>
+
+<script>
+function myFunction2() {
+    document.body.style.backgroundColor = "#32CD32";
+}
+</script>
+
+<button type="button" onclick="myFunction3()">Change colour to blue</button>
+
+<script>
+function myFunction3() {
+    document.body.style.backgroundColor = "#7FFFD4";
+}
+</script>
+
+<button type="button" onclick="myFunction4()">Change colour to yellow</button>
+
+<script>
+function myFunction4() {
+    document.body.style.backgroundColor = "#EBCA10";
+}
+</script>
+
+<button type="button" onclick="myFunction5()">Change colour to red</button>
+
+<script>
+function myFunction5() {
+    document.body.style.backgroundColor = "#FF4500";
+}
+</script>
+
+<button type="button" onclick="myFunction1()">Change colour to default</button>
+
+<script>
+function myFunction1() {
+    document.body.style.backgroundColor = "#FFA500";
+}
+</script>
+
+<h2>Games</h2>
+
+<button type="button" onclick = "myFunction6()">Tangerine Tycoon</button>
+
+<script>
+function myFunction6(){
+<embed height="600" width="800" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="http://tangerinetycoon.com/tangerine-tycoon.swf?21">
+}
+</script>
+
+<button type="button" onclick = "myFunction7()">Zombocalypse</button>
+
+<script>
+function myFunction7(){
+</script>
+<object type="application/x-shockwave-flash" id="game-content" name="game-content" data="http://i.adultswim.com/adultswim/big/games3/game-files/zombocalypse_2/game.swf" width="720" height="480" style="visibility: visible;"><param name="menu" value="false"><param name="base" value="http://i.adultswim.com/adultswim/big/games3/game-files/zombocalypse_2/"><param name="wmode" value="direct"><param name="allowScriptAccess" value="always"><param name="allowNetworking" value="always"></object>
+}
+
+</body>
+</html>
