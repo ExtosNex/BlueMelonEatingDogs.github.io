@@ -39,7 +39,7 @@
 		<button class = button id = btn9 onclick = openscase()>OPEN SPECIAL CASE</button><br>
 		<button class = button id = btn5 onclick = unlock()>UNLOCK UPGRADES ($20)</button>
 		<hr color = orange>
-		<marquee>Interest rate is: <strong id = interest></strong>... Interest recieved avery 2 minutes.</marquee>
+		<marquee>Interest rate is: <strong id = interestrate></strong>... Interest recieved avery 2 minutes.</marquee>
 		<h2>BANK</h2>
 		<p id = bank></p>
 		<button class = button id = btn2 onclick = transfer()>TRANSFER ALL MONEY FROM BANK</button>
@@ -60,6 +60,7 @@
 			var moneycase = 0;
 			var specialcase = 0;
 			var interest = 2;
+			var interestrate = interest - 1;
 			var timer = setInterval(onesec, 100);
 			var interest = setInterval(interesttimer, 120000);
 			document.getElementById("upgrades").style.display = "none";
@@ -67,7 +68,7 @@
 			function onesec(){
 				document.getElementById("money").innerHTML = "$" + money + "";
 				document.getElementById("bank").innerHTML = "$" + bank + "";
-				document.getElementById("interest").innerHTML = "" + interest + "00%";
+				document.getElementById("interestrate").innerHTML = "" + interestrate + "00%";
 				document.getElementById("camount").innerHTML = "| " + moneycase + " MONEY CASE(S) |";
 				document.getElementById("scamount").innerHTML = " " + specialcase + " SPECIAL CASE(S) |";
 			}
